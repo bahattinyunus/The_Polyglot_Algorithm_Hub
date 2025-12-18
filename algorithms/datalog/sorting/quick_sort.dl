@@ -1,0 +1,18 @@
+// Datalog is for deductive database queries, not general sorting.
+// However, we can represent order using logic.
+// This is a conceptual representation of order.
+
+.decl Input(idx: number, val: number)
+.decl Sorted(idx: number, val: number)
+
+Input(0, 10).
+Input(1, 7).
+Input(2, 8).
+Input(3, 9).
+Input(4, 1).
+Input(5, 5).
+
+// Sorting via count of smaller elements (Naive Logic Sort)
+Sorted(rank, val) :- Input(_, val), rank = count : { Input(_, other), other < val } + count : { Input(oidx, val), oidx < idx }.
+
+.output Sorted

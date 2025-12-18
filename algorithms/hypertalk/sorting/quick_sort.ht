@@ -1,0 +1,36 @@
+-- HyperTalk Quick Sort Script
+
+on mouseUp
+   put "10,7,8,9,1,5" into myList
+   put myList into field "output"
+   put return after field "output"
+   put quickSort(myList) after field "output"
+end mouseUp
+
+function quickSort theList
+   if the number of items in theList <= 1 then return theList
+   
+   put item 1 of theList into pivot
+   delete item 1 of theList
+   
+   put empty into less
+   put empty into greater
+   
+   repeat with x = 1 to the number of items in theList
+       if item x of theList < pivot then
+           put item x of theList & "," after less
+       else
+           put item x of theList & "," after greater
+       end if
+   end repeat
+   
+   if last char of less is "," then delete last char of less
+   if last char of greater is "," then delete last char of greater
+   
+   if less is not empty then put quickSort(less) & "," after final
+   put pivot & "," after final
+   if greater is not empty then put quickSort(greater) after final
+   if last char of final is "," then delete last char of final
+   
+   return final
+end quickSort

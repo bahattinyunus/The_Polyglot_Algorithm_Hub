@@ -1,0 +1,36 @@
+QUICKSORT: PROC OPTIONS(MAIN);
+   DCL ARR(6) FIXED BIN(31) INIT(10, 7, 8, 9, 1, 5);
+   DCL I FIXED BIN(31);
+
+   PUT SKIP LIST('Original:');
+   DO I = 1 TO 6;
+      PUT LIST(ARR(I));
+   END;
+
+   CALL SORT(ARR, 1, 6);
+
+   PUT SKIP LIST('Sorted:');
+   DO I = 1 TO 6;
+      PUT LIST(ARR(I));
+   END;
+
+   SORT: PROC(A, L, R) RECURSIVE;
+      DCL (A(*), L, R) FIXED BIN(31);
+      DCL (I, J, P, T) FIXED BIN(31);
+
+      IF L < R THEN DO;
+         P = A(R);
+         I = L - 1;
+         DO J = L TO R-1;
+            IF A(J) < P THEN DO;
+               I = I + 1;
+               T = A(I); A(I) = A(J); A(J) = T;
+            END;
+         END;
+         T = A(I+1); A(I+1) = A(R); A(R) = T;
+
+         CALL SORT(A, L, I);
+         CALL SORT(A, I+2, R);
+      END;
+   END SORT;
+END QUICKSORT;

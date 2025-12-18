@@ -1,0 +1,25 @@
+procedure main()
+    L := [10, 7, 8, 9, 1, 5]
+    write("Original: ", list_string(L))
+    L := quicksort(L)
+    write("Sorted:   ", list_string(L))
+end
+
+procedure quicksort(L)
+    if *L <= 1 then return L
+    pivot := L[1]
+    less := []
+    equal := []
+    greater := []
+    every x := !L do
+        if x < pivot then put(less, x)
+        else if x = pivot then put(equal, x)
+        else put(greater, x)
+    return quicksort(less) ||| equal ||| quicksort(greater)
+end
+
+procedure list_string(L)
+    s := ""
+    every s ||:= !L || " "
+    return s
+end

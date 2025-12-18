@@ -1,0 +1,35 @@
+Begin
+   Integer Array A(1:6);
+   Integer I;
+
+   Procedure QuickSort(A, Lo, Hi); Integer Array A; Integer Lo, Hi;
+   Begin
+      Integer I, J, Pivot, Temp;
+      If Lo < Hi Then Begin
+         Pivot := A(Hi);
+         I := Lo - 1;
+         For J := Lo Step 1 Until Hi - 1 Do Begin
+            If A(J) < Pivot Then Begin
+               I := I + 1;
+               Temp := A(I); A(I) := A(J); A(J) := Temp;
+            End;
+         End;
+         Temp := A(I + 1); A(I + 1) := A(Hi); A(Hi) := Temp;
+         
+         QuickSort(A, Lo, I);
+         QuickSort(A, I + 2, Hi);
+      End;
+   End;
+
+   A(1):=10; A(2):=7; A(3):=8; A(4):=9; A(5):=1; A(6):=5;
+   
+   OutText("Original: ");
+   For I:=1 Step 1 Until 6 Do OutInt(A(I), 4);
+   OutImage;
+
+   QuickSort(A, 1, 6);
+
+   OutText("Sorted:   ");
+   For I:=1 Step 1 Until 6 Do OutInt(A(I), 4);
+   OutImage;
+End;

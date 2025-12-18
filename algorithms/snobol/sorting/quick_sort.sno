@@ -1,0 +1,29 @@
+* SNOBOL4 QuickSort
+    arr = ARRAY("0:5")
+    arr<0> = 10; arr<1> = 7; arr<2> = 8
+    arr<3> = 9;  arr<4> = 1; arr<5> = 5
+     OUTPUT = "Original: " arr<0> " " arr<1> " " arr<2> " " arr<3> " " arr<4> " " arr<5>
+    
+    DEFINE('QSORT(L,R)P,I,J,T')
+    
+    QSORT(0, 5)
+    
+    OUTPUT = "Sorted:   " arr<0> " " arr<1> " " arr<2> " " arr<3> " " arr<4> " " arr<5>
+    :S(END)
+
+QSORT
+    GT(L, R) :S(RETURN)
+    P = arr<R>
+    I = L - 1
+    J = L
+L1  GE(J, R) :S(L2)
+    LT(arr<J>, P) :F(INCJ)
+    I = I + 1
+    T = arr<I>; arr<I> = arr<J>; arr<J> = T
+INCJ
+    J = J + 1 :(L1)
+L2
+    T = arr<I + 1>; arr<I + 1> = arr<R>; arr<R> = T
+    QSORT(L, I)
+    QSORT(I + 2, R) :(RETURN)
+END

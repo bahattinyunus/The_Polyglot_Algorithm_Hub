@@ -1,0 +1,26 @@
+PROGRAM quicksort
+BEGIN
+  PROC quick_sort = (REF []INT a) VOID:
+  BEGIN
+    IF UPB a > LWB a THEN
+      INT pivot = a[LWB a];
+      INT left := LWB a + 1;
+      INT right := UPB a;
+      WHILE left <= right DO
+        WHILE left <= right ANDF a[left] <= pivot DO left +:= 1 OD;
+        WHILE left <= right ANDF a[right] > pivot DO right -:= 1 OD;
+        IF left < right THEN
+          INT temp = a[left]; a[left] := a[right]; a[right] := temp
+        FI
+      OD;
+      INT temp := a[LWB a]; a[LWB a] := a[right]; a[right] := temp;
+      quick_sort(a[LWB a : right - 1]);
+      quick_sort(a[right + 1 : UPB a])
+    FI
+  END;
+  
+  [6]INT arr := (10, 7, 8, 9, 1, 5);
+  print(("Original: ", arr, new line));
+  quick_sort(arr);
+  print(("Sorted:   ", arr, new line))
+END

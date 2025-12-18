@@ -1,0 +1,34 @@
+GET "LIBHDR"
+
+LET START() = VALOF
+$(
+    LET A = VEC 6
+    A!0 := 10; A!1 := 7; A!2 := 8; A!3 := 9; A!4 := 1; A!5 := 5
+    
+    WRITEF("Original: %N %N %N %N %N %N*N", A!0, A!1, A!2, A!3, A!4, A!5)
+    
+    QUICKSORT(A, 0, 5)
+    
+    WRITEF("Sorted:   %N %N %N %N %N %N*N", A!0, A!1, A!2, A!3, A!4, A!5)
+    RESULTIS 0
+$)
+
+AND QUICKSORT(A, L, R) BE
+$(
+    LET P, I, J, T = ?, ?, ?, ?
+    IF L < R THEN
+    $(
+        P := A!R
+        I := L - 1
+        FOR K = L TO R-1 DO
+            IF A!K < P THEN
+            $(
+                I := I + 1
+                T := A!I; A!I := A!K; A!K := T
+            $)
+        T := A!(I+1); A!(I+1) := A!R; A!R := T
+        
+        QUICKSORT(A, L, I)
+        QUICKSORT(A, I+2, R)
+    $)
+$)

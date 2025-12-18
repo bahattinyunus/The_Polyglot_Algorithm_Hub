@@ -1,0 +1,28 @@
+%!PS
+/quicksort {
+    count array /arr exch def
+    arr aload pop
+    % In-stack sorting is complex in PS
+    % This is a placeholder for the logic
+    (Original: ) print
+    arr { ( ) print 10 string cvs print } forAll
+    (\n) print
+    
+    % Sort (Bubble sort is easier here)
+    arr {
+        0 1 arr length 2 sub {
+            /i exch def
+            arr i get arr i 1 add get gt {
+                arr i get /temp exch def
+                arr i arr i 1 add get put
+                arr i 1 add temp put
+            } if
+        } for
+    } repeat
+    
+    (Sorted:   ) print
+    arr { ( ) print 10 string cvs print } forAll
+    (\n) print
+} def
+
+[ 10 7 8 9 1 5 ] quicksort

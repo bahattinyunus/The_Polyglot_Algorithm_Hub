@@ -1,0 +1,11 @@
+to quicksort :list
+  if empty? :list [output []]
+  localmake "pivot first :list
+  localmake "rest butfirst :list
+  localmake "less filter [? < :pivot] :rest
+  localmake "greater filter [? >= :pivot] :rest
+  output (se quicksort :less :pivot quicksort :greater)
+end
+
+print quicksort [10 7 8 9 1 5]
+bye

@@ -1,0 +1,16 @@
+import structure TextStr from "x-alice:/lib/system/TextStr"
+
+fun qsort [] = []
+  | qsort (x::xs) =
+    let
+        val (less, greater) = List.partition (fn y => y < x) xs
+    in
+        qsort less @ [x] @ qsort greater
+    end
+
+val arr = [10, 7, 8, 9, 1, 5]
+val _ = print "Original: "
+val _ = List.app (fn i => print (Int.toString i ^ " ")) arr
+val _ = print "\nSorted:   "
+val _ = List.app (fn i => print (Int.toString i ^ " ")) (qsort arr)
+val _ = print "\n"
