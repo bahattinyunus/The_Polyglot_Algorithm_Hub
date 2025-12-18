@@ -15,7 +15,21 @@ Bu klasör, bu dilin tasarım dokümanlarını, söz dizimi (syntax) taslakları
 *   **Go**'nun eşzamanlılığı (Concurrency)
 
 ## Durum
-🧪 **AŞAMA 1: KAVRAMSAL TASARIM**
-Şu an syntax ve semantik üzerine düşünce deneyleri yapılmaktadır.
+🧪 **AŞAMA 1: PROTOTİP (Prototype)**
+
+Artık çalıştırılabilir bir çekirdeğimiz var. `omni.py` basit bir yorumlayıcıdır.
+
+### Çalıştırma
+```bash
+python genesis/omni.py genesis/hello.omni
+```
+
+### Örnek Kod (`hello.omni`)
+```omni
+fn main() -> void {
+    print("Merhaba Evren! Ben Omni.");
+    print("Kesret bitti, Vahdet başladı.");
+}
+```
 
 [👉 Kavramsal Tasarımı İncele (CONCEPT.md)](CONCEPT.md)

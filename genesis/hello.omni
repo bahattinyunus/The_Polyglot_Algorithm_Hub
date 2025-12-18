@@ -1,0 +1,4 @@
+fn main() -> void {
+    print("Merhaba Evren! Ben Omni.");
+    print("Kesret bitti, Vahdet başladı.");
+}
