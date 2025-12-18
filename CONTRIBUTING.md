@@ -1,42 +1,40 @@
-# Contributing to The Polyglot Algorithm Hub
+# Katkıda Bulunma Rehberi
 
-We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
+**Polyglot Algorithm Hub**'a ilgi gösterdiğiniz için teşekkürler! Bu proje, programlama dillerinin çeşitliliğini kutlamak için var ve sizin katkılarınızla daha da büyüyor.
 
-- Reporting a bug
-- Discussing the current state of the code
-- Submitting a fix
-- Proposing new features
-- Becoming a maintainer
+## 🌟 Nasıl Katkıda Bulunabilirim?
 
-## We Develop with Github
-We use github to host code, to track issues and feature requests, as well as accept pull requests.
+1.  **Yeni Bir Dil Ekleyin:**
+    Henüz listemizde olmayan (ki 140 dil var, zorlanabilirsiniz!) egzotik veya yeni bir dil biliyorsanız, lütfen ekleyin.
 
-## Report bugs using Github's [issue tracker](https://github.com/USERNAME/REPO/issues)
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](); it's that easy!
+2.  **Mevcut Dilleri İyileştirin:**
+    Var olan kodları daha "idiomatic" (o dile özgü en iyi pratiklerle) hale getirin.
 
-## Write bug reports with detail, background, and sample code
-**Great Bug Reports** tend to have:
+3.  **Yeni Algoritmalar:**
+    Şu an odağımız öncelikle **Quick Sort**. İleride Binary Search ve diğerlerine genişleyeceğiz.
 
-- A quick summary and/or background
-- Steps to reproduce
-  - Be specific!
-  - Give sample code if you can.
-- What you expected would happen
-- What actually happened
-- Notes (possibly including why you think this might be happening, or stuff you tried that didn't work)
+## 🛠️ Adım Adım Rehber
 
-## License
-By contributing, you agree that your contributions will be licensed under its MIT License.
+1.  **Forklayın:** Projeyi kendi hesabınıza forklayın.
+2.  **Branch Açın:** `feature/yeni-dil-adi` şeklinde bir branch oluşturun.
+3.  **Klasör Yapısına Uyun:**
+    `algorithms/{dil-adi}/sorting/quick_sort.{uzanti}`
+4.  **Kodlayın:**
+    *   Kodun başına yorum satırı olarak dilin adını ve algoritmayı yazın.
+    *   Okunabilir ve temiz kod yazmaya özen gösterin.
+    *   Mümkünse örnek bir veri seti (`[10, 7, 8, 9, 1, 5]`) ve çıktısını ekleyin.
+5.  **Pull Request (PR) Gönderin:**
+    Yaptığınız değişiklikleri açıklayan güzel bir PR gönderin.
 
-## Style Guide
-Please ensure your code conforms to the standard style guides for each language:
-- **Python**: PEP 8
-- **JavaScript**: Airbnb Style Guide or StandardJS
-- **C++**: Google C++ Style Guide
-- **Go**: `gofmt` standard
+## 🎨 Stil Rehberi
 
-## Directory Structure
-When adding a new algorithm, please follow the existing structure:
-`algorithms/{language}/{category}/{algorithm_name}.{extension}`
+*   Dosya isimleri `snake_case` (örn: `quick_sort.py`) veya dilin standartlarına uygun (örn: Java için `QuickSort.java`) olmalıdır.
+*   Girintileme (indentation) konusunda her dilin kendi standartlarını takip edin (Python 4 boşluk, Ruby 2 boşluk vb.).
 
-Example: `algorithms/python/sorting/merge_sort.py`
+## 🛡️ Davranış Kuralları
+
+Burası bir öğrenme ve paylaşma alanıdır. Lütfen nazik olun, yapıcı eleştirilerde bulunun ve kodun sanatına saygı duyun.
+
+---
+
+Katkılarınız için şimdiden teşekkürler! 🚀
