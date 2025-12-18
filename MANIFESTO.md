@@ -16,9 +16,24 @@ Bu depo, 140 dili istiflemek için değil, **140 farklı zihniyeti** onurlandır
 
 ## 2. Tekillik (Singularity) Vizyonu
 
-Biz, Babil Kulesi'ni yeniden inşa etmiyoruz. Biz, kulenin yıkılmasından sonra dağılan parçaları **dijital bir mozaik** olarak birleştiriyoruz.
+**"Tekillik" (Singularity) nedir?**
 
-Hedefimiz, bir algoritmanın (Quick Sort) prizmadan geçen ışık gibi 140 farklı renge ayrılmasını izlemek. Özünde hepsi aynı şeyi yapar: Sıralar. Ama *nasıl* yaptıkları, o dili tasarlayan insan zihninin bir yansımasıdır.
+Bilişim evreninde Tekillik, 140 farklı dilin sentaks gürültüsünün (syntax noise) yok olduğu ve geriye sadece **saf mantığın** (pure logic) kaldığı teorik noktadır.
+
+Babil Kulesi yıkıldığında diller ayrıştı ve insanlık birbirini anlamaz oldu. Biz bu projeyle o dağılan parçaları **dijital bir mozaik** olarak tekrar birleştiriyoruz. 
+Hedefimiz sadece çok dil bilmek (Polyglotism) değil; dillerin ötesindeki **"Meta-Dil"i** kavramaktır.
+
+*   Quick Sort algoritması C'de bellek yönetimidir.
+*   Haskell'de matematiksel bir tanımdır.
+*   Prolog'da mantıksal bir önermedir.
+*   Bizim için ise bunların hepsi **Tek Bir Gerçekliğin (Algoritmanın)** farklı gölgeleridir.
+
+**Project Genesis** (Omni Dili), bu tekilliğe ulaşma çabamızdır. Öyle bir dil hayal edin ki;
+1.  Assembly kadar metale yakın ve güçlü,
+2.  Lisp kadar esnek ve sınırsız,
+3.  Haskell kadar hatasız ve saf olsun.
+
+Bu nokta, kodun bittiği ve "düşüncenin doğrudan makineye aktarıldığı" Olay Ufku'dur.
 
 ## 3. Kod Sanattır
 
