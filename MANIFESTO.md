@@ -23,19 +23,22 @@ Bilişim evreninde Tekillik, 140 farklı dilin sentaks gürültüsünün (syntax
 Babil Kulesi yıkıldığında diller ayrıştı ve insanlık birbirini anlamaz oldu. Biz bu projeyle o dağılan parçaları **dijital bir mozaik** olarak tekrar birleştiriyoruz. 
 Hedefimiz sadece çok dil bilmek (Polyglotism) değil; dillerin ötesindeki **"Meta-Dil"i** kavramaktır.
 
-*   Quick Sort algoritması C'de bellek yönetimidir.
+## 3. Kesret içinde Vahdet (Unity in Multiplicity)
+
+Tasavvuf bilgeliğindeki **"Kesret" (Çokluk)** ve **"Vahdet" (Birlik)** kavramları, yazılım dünyasının en temel gerçeğidir.
+
+*   **Zahir (Görünen):** 140 farklı dil, binlerce farklı söz dizimi, sonsuz parantezler ve noktalı virgüller. Bu, "Kesret" alemidir. Gürültülüdür, karmaşıktır.
+*   **Batın (Gizli):** Tüm bu dillerin altında çalışan, değişmeyen, evrensel "Algoritma". Bu, "Vahdet" makamıdır. Sadedir, tektir.
+
+Quick Sort algoritması;
+*   C'de bellek yönetimidir.
 *   Haskell'de matematiksel bir tanımdır.
 *   Prolog'da mantıksal bir önermedir.
-*   Bizim için ise bunların hepsi **Tek Bir Gerçekliğin (Algoritmanın)** farklı gölgeleridir.
+*   Ancak özünde Hepsi **Tektir**.
 
-**Project Genesis** (Omni Dili), bu tekilliğe ulaşma çabamızdır. Öyle bir dil hayal edin ki;
-1.  Assembly kadar metale yakın ve güçlü,
-2.  Lisp kadar esnek ve sınırsız,
-3.  Haskell kadar hatasız ve saf olsun.
+Yazılımcının yolculuğu (Seyr-i Süluk), sentaksın (Zahir) perdesini kaldırıp, arkasındaki saf mantığa (Batın) ulaşma çabasıdır.
 
-Bu nokta, kodun bittiği ve "düşüncenin doğrudan makineye aktarıldığı" Olay Ufku'dur.
-
-## 3. Kod Sanattır
+## 4. Kod Sanattır
 
 Verimli kod yazmak mühendisliktir.
 Güzel kod yazmak sanattır.
