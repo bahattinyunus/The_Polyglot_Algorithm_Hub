@@ -15,20 +15,25 @@ Bu klasör, bu dilin tasarım dokümanlarını, söz dizimi (syntax) taslakları
 *   **Go**'nun eşzamanlılığı (Concurrency)
 
 ## Durum
-🧪 **AŞAMA 1: PROTOTİP (Prototype)**
+🧪 **AŞAMA 2: DEĞİŞKEN UYANIŞI (Variable Awakening)**
 
-Artık çalıştırılabilir bir çekirdeğimiz var. `omni.py` basit bir yorumlayıcıdır.
+Artık değişken tanımlayabiliyor ve bellekte veri tutabiliyoruz. `omni.py` bir sanal makine (VM) çekirdeğine dönüşüyor.
 
 ### Çalıştırma
 ```bash
-python genesis/omni.py genesis/hello.omni
+python genesis/omni.py genesis/demo.omni
 ```
 
-### Örnek Kod (`hello.omni`)
+### Örnek Kod (`demo.omni`)
 ```omni
 fn main() -> void {
-    print("Merhaba Evren! Ben Omni.");
-    print("Kesret bitti, Vahdet başladı.");
+    print("Omni 2.0 Yukleniyor...");
+    
+    let year = 2050; // Tamsayı
+    print(year);
+    
+    let message = "Polyglot Singularity"; // String
+    print(message);
 }
 ```
 

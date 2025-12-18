@@ -1,0 +1,11 @@
+fn main() -> void {
+    print("Omni 2.0 Yukleniyor...");
+    
+    let year = 2050;
+    print(year);
+    
+    let message = "Polyglot Singularity";
+    print(message);
+    
+    print("Sistem Hazir.");
+}
